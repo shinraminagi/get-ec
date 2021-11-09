@@ -23,7 +23,7 @@ func main() {
 	flag.Parse()
 	url := flag.Arg(0)
 
-	if !regexp.MustCompile(`^https?://(?:en|ja|zh)\.erocool\d\.com/detail/.+\.html$`).MatchString(url) {
+	if !regexp.MustCompile(`^https?://(?:en|ja|zh)\.erocool\d?\.com/detail/.+\.html$`).MatchString(url) {
 		log.Fatalln("Invalid EroCool URL")
 	}
 
